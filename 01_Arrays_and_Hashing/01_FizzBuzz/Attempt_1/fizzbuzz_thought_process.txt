@@ -1,0 +1,8 @@
+This problem is about handling edge cases, and handling them with different logic as I go.
+
+Since it can be the case that 15 meets both 3 and 5 conditions, I'm prioritizing that first (FizzBuzz).
+Next is conditions 3 and 5, which are Fizz and Buzz respectively.
+
+Last is when none of those conditions are met, return the number as a string.
+
+The result is a list of strings, in the order from 1 to n.

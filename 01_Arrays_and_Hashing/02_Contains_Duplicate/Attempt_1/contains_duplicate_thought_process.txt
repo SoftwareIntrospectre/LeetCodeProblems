@@ -1,0 +1,7 @@
+This problem is about handling edge cases, and iterating through an array.
+
+If it's a list (array) of integers, and all I need to do is check to see if it's a duplicate: then sorting it first would be simplest.
+
+That way the earliest possible moment a duplicate appears, it can be returned as true the moment it happens. Otherwise will return false.
+
+This has the weakness of being O(n) in the event the last element is the same as the 2nd to last element, but going with this approach for Attempt 1.
