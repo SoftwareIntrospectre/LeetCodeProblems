@@ -1,0 +1,65 @@
+Method from G. Polya's book: "How to Solve It (2nd Edition)"
+
+
+1. Understanding the Problem
+    A. What is the Unknown?
+    B. What are the data?
+    C. What is the Condition?
+    D. Is it possible to satisfy the condition?
+        D1. Is it insufficient?
+        D2. Is it redundant?
+        D3. Is it contradictory?
+
+    E. Draw a figure (i.e.: make a model / example)
+    F. Separate various parts of the condition (write them down)
+
+2. Devising a Plan
+    A. Familiarity with the problem
+        A1. Have you seen it before? 
+        A2. If not: have you seen the same problem in a slightly different form?
+    
+    B. Do you know a related problem?
+        B1. Do you know of a provable method that can be useful?
+
+    C. Look at the Unknown
+        C1. Do you know of a problem with a similar Unknown?
+            C1a. If so: Could you use the result here?
+            C1b. If so: Could you use the method here?
+                C1bi. If so: Should you introduce an extra element to that method make it work?
+
+    D. Could you restate the problem?
+        D1. If so: Could you still restate it differently?
+    
+    E. Could you imagine a more accessible problem?
+        E1. If not: Could you imagine a more general problem?
+        E2. If not: Could you imagine a more specialized problem?
+        E3. If not: Could you imagine a more analagous problem? (i.e. analogy for comparison)
+    
+    F. Could you solve part of the problem?
+        F1. Can you keep only part of the condition?
+            F1a. Can you drop the other part of the condition?
+                Fi. 1aCan you determine how much of the unknown is left after that?
+        
+    G. Could you derive something useful from the data?
+        G1. Could you think of other data appropriate to determine the unknown?
+        G2. Could you change the unknown or the data, or both if necessary, so that the new unknown and the new data are nearer to each other?
+        
+    H. Did you use all of the data?
+    
+    I. Did you use the whole condition?
+
+    J. Have you taken into account all essential notations involved in the problem?
+
+
+3. Carrying Out the Plan
+    A. Check each Step.
+        A1. Can you see clearly that the step is correct?
+            A1a. Can you prove that it is correct?
+
+4. Looking Back
+    A. Can you check the result?
+    B. Can you check the argument?
+    C. Can you derive the result differently?
+        C1. Can you see it at a glance?
+
+    D. Can you use the result, or method, for some other problem?
