@@ -1,0 +1,114 @@
+"Given an Array of Inteter nums"  
+    - input: array of whole numbers
+
+"and an integer target"
+    - second input: whole number target
+
+"return the indicides of the two numbers such that they add up to the target."
+    - returning an array with the numbers of the indices, not the values themselves
+
+"You may assume that each input would have only 1 solution,  
+    - weird, but OK. I guess I'm choosing the first match.
+
+"and you may not use the same element twice."
+    - this makes sense, because I need to use two different indices" for this.
+
+"You can return the answer in any order."
+    - This means that I can go to the beginning or end of the array I guess.
+
+--------------------------------------------------------------------------------
+
+This seems like a binary search problem, where the target is the middle. We can take a sorted array of integers,
+and completely ignore all numbers that are less than the target.
+
+I do not say "less than or equal to" because of the possibility of 0 + target.
+
+1. Take a sorted array of numbers
+2. Take the target as the middle
+3. Do ignore all numbers that are larger than the target
+4. Search the left half (remaining) array for 2 numbers that add up to the target.
+5. "Only one valid answer exists" apparently.
+    - This is weird to me, but that says to me that I'm only searching for the first case of the condition
+
+
+If this can be done in any order, then I could potentially take the target - current index, and check to see if the value equals another index. If it does, return the current index and the searched index.
+
+
+Example:
+
+target = 12
+arary = [1,7,19,24,5]
+sorted array = [1,5,7,19,24]
+
+
+Example 1:
+    target = 12
+ 0  1   2    3   4
+[1, 5,  7,  19, 24]
+
+middle = 7
+ - need algorithm to determine the middle
+
+ is middle < target?
+    yes
+                                0  1  2
+        smaller_sorted_array = [1, 5, 7]
+
+            go through the array in reverse order, because I want to do subtraction
+
+            target - smaller_sorted_array[current_index] == smaller_sorted_array[current_index - 1]?
+                12 - 7 == 5? Yes.
+                    Return number of smaller_sorted_array[current_index] and smaller_sorted_array[current_index - 1]
+                        result: [0,1]
+
+
+Example 2:
+    target = 27
+ 0  1  2   3   4   5
+[1, 3, 5,  7,  19, 24]
+
+middle = (array's length - 1 )// 2 # // being floor division, and prevents out of bounds exception
+
+middle = 5 (index 2) --> 3rd index
+    - need additional check to see if index after the middle is less than target
+
+        - if (array[middle] < target):
+            if array[middle + 1] < target:
+                middle = array[middle + 1]
+
+                    (continue loop until this is no longer true)
+
+                    middle = 7
+
+middle  = 5
+    is 5 < 12? Yes.
+        is 7 < 12? Yes
+            middle = 7
+
+    is 7 < 12? Yes.
+        is 19 < 12? No.
+            exit loop.
+
+            check if target - array[middle] == array[middle - 1]
+                otherwise: loop through the array backwards from middle to the start of the array until condition met, or no more indexes to check
+                    # can probably use Dynamic Programming for this too. Keeping track of indexes that I checked already.
+
+searched_values = []
+    -find combination of values that add up to the target. Return the first one.
+        **TODO: Learn more about Binarcy Search and Dynamic Programming. Apply it here.
+
+
+
+
+
+ is middle < target?
+    yes
+                                0  1  2
+        smaller_sorted_array = [1, 5, 7]
+
+            go through the array in reverse order, because I want to do subtraction
+
+            target - smaller_sorted_array[current_index] == smaller_sorted_array[current_index - 1]?
+                12 - 7 == 5? Yes.
+                    Return number of smaller_sorted_array[current_index] and smaller_sorted_array[current_index - 1]
+                        result: [0,1]
