@@ -1,0 +1,32 @@
+Definition: 
+    - a word or phrase
+    - formed by rearranging the letters of a different word or phrase
+    - typically using all the original letters
+    - original letters used exactly once
+
+Examples:
+    - input 1: "anagram"
+    - input 2: "nagram"
+
+Condition:
+    - If all of the letters from input1 are in input2, with the same frequency
+
+Test Cases:
+    - input1, input2
+    - sort both anagrams to see the characters
+    - compare both strings to see if they match
+
+    Test Case A
+    - car --> acr
+    - rat --> art
+        - Do strings match? No.
+            - return False
+
+    Test Case B
+    - care --> acer
+    - race --> acer
+        - do strings match? Yes.
+            - return True
+
+
+    
