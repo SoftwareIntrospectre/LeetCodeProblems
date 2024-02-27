@@ -1,7 +1,6 @@
 # LeetCodeProblems
 Roadmap of building LeetCode skill through curated list of problems. Meant to track my progress.
 
-
 This is based on NeetCode's roadmap on this. The idea is to start simple, and have foundational knowledge
 build upon itself to solve more complex problems.
 
